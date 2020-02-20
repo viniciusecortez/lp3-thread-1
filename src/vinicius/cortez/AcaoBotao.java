@@ -9,19 +9,22 @@ public class AcaoBotao implements ActionListener{
 
     private JTextField primeiro;
     private JTextField segundo;
-    private JLabel resultado;
+    private JLabel resultadoMultiplicacao;
+    private JLabel resultadoDivisao;
 
-    public AcaoBotao(JTextField primeiro, JTextField segundo ,JLabel resultado){
+    public AcaoBotao(JTextField primeiro, JTextField segundo ,JLabel resultadoMultiplicacao, JLabel resultadoDivisao){
         this.primeiro = primeiro;
         this.segundo = segundo;
-        this.resultado = resultado;
-
+        this.resultadoMultiplicacao = resultadoMultiplicacao;
+        this.resultadoDivisao = resultadoDivisao;
     }
 
     public void actionPerformed(ActionEvent e){
-        TarefaMultiplicacao tarefaMultiplicacao = new TarefaMultiplicacao(primeiro, segundo, resultado);
-
+        TarefaMultiplicacao tarefaMultiplicacao = new TarefaMultiplicacao(primeiro, segundo, resultadoMultiplicacao);
+        TarefaDivisao tarefaDivisao = new TarefaDivisao(primeiro, segundo, resultadoDivisao);
         (new Thread(tarefaMultiplicacao)).start();
+        (new Thread(tarefaDivisao)).start();
+
     }
 
 

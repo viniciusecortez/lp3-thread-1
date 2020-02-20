@@ -20,7 +20,7 @@ public class TarefaDivisao implements Runnable {
     public void run() {
         long valor1 = Long.parseLong(primeiro.getText());
         long valor2 = Long.parseLong(segundo.getText());
-        BigInteger calculo = new BigInteger("0");
+        Long calculo = valor1 / valor2;
         resultado.setText(calculo.toString());
    
         }

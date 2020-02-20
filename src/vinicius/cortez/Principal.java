@@ -20,7 +20,7 @@ public class Principal {
         JLabel resultadoDivisao = new JLabel(" Resultado Divisão");
 
 
-        botao.addActionListener(new AcaoBotao(primeiro, segundo, resultadoMultiplicacao));
+        botao.addActionListener(new AcaoBotao(primeiro, segundo, resultadoMultiplicacao, resultadoDivisao));
         
         JPanel painel = new JPanel();
         painel.add(primeiro);
