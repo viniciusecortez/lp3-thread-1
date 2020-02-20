@@ -18,18 +18,22 @@ public class Principal {
         JButton botao = new JButton(" = ");
         JLabel resultadoMultiplicacao = new JLabel(" Resultado Múltiplicação");
         JLabel resultadoDivisao = new JLabel(" Resultado Divisão");
+        JLabel resultadoSoma = new JLabel("Resultado Soma");
+        JLabel resultadoSubtracao = new JLabel(" Resultado Subtração ");
 
-
-        botao.addActionListener(new AcaoBotao(primeiro, segundo, resultadoMultiplicacao, resultadoDivisao));
+        botao.addActionListener(new AcaoBotao(primeiro, segundo, resultadoMultiplicacao, resultadoDivisao,
+                resultadoSubtracao,
+                resultadoSoma));
         
         JPanel painel = new JPanel();
         painel.add(primeiro);
-        painel.add(new JLabel("x"));
+        painel.add(new JLabel("all"));
         painel.add(segundo);
         painel.add(botao);
         painel.add(resultadoMultiplicacao);
         painel.add(resultadoDivisao);
-
+        painel.add(resultadoSoma);
+        painel.add(resultadoSubtracao);
         janela.add(painel);
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         janela.pack();
